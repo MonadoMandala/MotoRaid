@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MotoRaid - Servicios</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Manifest PWA -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#00c853" />
+
+  <!-- Icono para dispositivos -->
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+</head>
+<body>
+  <div class="app-container">
+    <h1>🚖 MotoRaid</h1>
+    <p class="service-tag">Servicios disponibles</p>
+    <p class="subtitle">Elige tu servicio: Mototaxi o Motomandado</p>
+    <p class="subtitle">Tarifa C$40</p>
+
+    <form id="formMotoRaid" novalidate>
+      <label for="tipoServicio">Tipo de servicio</label>
+      <select id="tipoServicio" name="tipoServicio" required>
+        <option value="">Seleccione</option>
+        <option value="Mototaxi">Mototaxi</option>
+        <option value="Motomandado">Motomandado</option>
+      </select>
+
+      <div id="camposComunes">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required autocomplete="name" />
+
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Ej: 88887777" pattern="[0-9]{8,15}" required autocomplete="tel" />
+        <p class="hint">Solo números, 8 a 15 dígitos.</p>
+      </div>
+
+      <div id="camposMototaxi" class="hidden">
+        <label for="sexo">Sexo</label>
+        <select id="sexo" name="sexo">
+          <option value="">Seleccione</option>
+          <option value="Masculino">Masculino</option>
+          <option value="Femenino">Femenino</option>
+          <option value="Otro">Otro</option>
+        </select>
+
+        <label for="ubicacion">Ubicación</label>
+        <input type="text" id="ubicacion" name="ubicacion" placeholder="Ej: Managua" autocomplete="address-level2" />
+
+        <label for="direccion">Dirección Destino</label>
+        <input type="text" id="direccion" name="direccion" placeholder="Ej: Colonia Centro, 2c al sur, 1c arriba" autocomplete="street-address" />
+        <p class="hint">Describe puntos de referencia si es posible.</p>
+      </div>
+
+      <div id="camposMotomandado" class="hidden">
+        <label for="direccionMandado">Dirección</label>
+        <input type="text" id="direccionMandado" name="direccionMandado" placeholder="Ej: Barrio Las Flores" />
+
+        <label for="descripcion">Descripción del servicio</label>
+        <textarea id="descripcion" name="descripcion" placeholder="Ej: Comprar medicinas en farmacia X"></textarea>
+      </div>
+
+      <button type="submit">Enviar por WhatsApp</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js")
+        .then(() => console.log("Service Worker registrado"))
+        .catch(err => console.error("Error al registrar SW:", err));
+    }
+  </script>
+</body>
+</html>
