@@ -130,9 +130,8 @@ button:active {
 /* Banner centrado dentro del form */
 form .banner {
   display: block;
-  margin: 0 auto 15px;
   width: 100%;
-  max-width: 504px; /* ajusta según el tamaño de tu imagen */
   height: auto;
+  margin: 0 auto 15px;
   border-radius: 12px;
 }
