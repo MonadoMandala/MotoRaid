@@ -128,11 +128,8 @@ button:active {
   to { opacity: 1; transform: translateY(0); }
 }
 form .banner {
+  width: 100%;   /* ocupa el ancho del formulario */
+  height: auto;  /* mantiene proporción */
   display: block;
-  margin: 0 auto 15px auto; /* centrada y con espacio abajo */
-  width: 100%;               /* ocupa todo el ancho del form */
-  max-width: 400px;           /* no más grande de 400px */
-  height: auto;               /* mantiene proporción */
-  border-radius: 12px;
-  object-fit: cover;
+  margin-bottom: 15px;
 }
