@@ -80,6 +80,10 @@ input, select, textarea {
   height: 3.6rem;           /* FUE AGREGADA O MODIFICADA */
 }
 
+textarea {
+  height: 120px; /* diferente altura para textarea */
+}
+
 input::placeholder, textarea::placeholder {
   color: rgba(0,0,0,0.5);
 }
