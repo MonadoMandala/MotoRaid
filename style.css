@@ -129,10 +129,11 @@ button:active {
 }
 /* Estilo para el banner dentro del form */
 form .banner {
-  width: 100%;        
-  max-height: 180px;  
-  object-fit: cover;  
-  border-radius: 12px; 
-  margin-bottom: 15px; 
-  display: block;     
+  width: 100%;            /* ocupa todo el ancho del form */
+  height: auto;           /* mantiene proporción */
+  max-height: 180px;      /* máximo alto */
+  object-fit: cover;      /* recorta si hace falta sin deformar */
+  border-radius: 12px;    
+  margin-bottom: 15px;    
+  display: block;         
 }
