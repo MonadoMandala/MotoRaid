@@ -76,6 +76,8 @@ input, select, textarea {
   background: rgba(255,255,255,0.3);
   color: #000;
   resize: none;
+  box-sizing: border-box;  /* FUE AGREGADA O MODIFICADA */
+  height: 3.6rem;           /* FUE AGREGADA O MODIFICADA */
 }
 
 input::placeholder, textarea::placeholder {
