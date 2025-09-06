@@ -127,13 +127,12 @@ button:active {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
-/* Estilo para el banner dentro del form */
 form .banner {
-  width: 100%;            /* ocupa todo el ancho del form */
-  height: auto;           /* mantiene proporción */
-  max-height: 180px;      /* máximo alto */
-  object-fit: cover;      /* recorta si hace falta sin deformar */
-  border-radius: 12px;    
-  margin-bottom: 15px;    
-  display: block;         
+  display: block;
+  margin: 0 auto 15px auto; /* centrada y con espacio abajo */
+  width: 100%;               /* ocupa todo el ancho del form */
+  max-width: 400px;           /* no más grande de 400px */
+  height: auto;               /* mantiene proporción */
+  border-radius: 12px;
+  object-fit: cover;
 }
