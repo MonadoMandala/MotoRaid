@@ -1,4 +1,4 @@
-const NUMERO_WHATSAPP = "50586210766";
+const NUMERO_WHATSAPP = "50589118992";
 const form = document.getElementById("formMotoRaid");
 const tipoServicio = document.getElementById("tipoServicio");
 const camposMototaxi = document.getElementById("camposMototaxi");
