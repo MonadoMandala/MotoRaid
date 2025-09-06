@@ -129,9 +129,9 @@ button:active {
 }
 /* Banner centrado dentro del form */
 form .banner {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0 auto 15px;
+  display: block;        /* necesaria para centrar con margin auto */
+  max-width: 100%;       /* nunca se hará más grande que el contenedor */
+  height: auto;          /* mantiene proporción */
+  margin: 0 auto 15px;   /* centrada horizontalmente + espacio abajo */
   border-radius: 12px;
 }
