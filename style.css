@@ -64,6 +64,13 @@ label {
   font-size: 0.95rem;
 }
 
+/* Contenedor form para alinear elementos */
+form {
+  display: flex;                /* FUE AGREGADA O MODIFICADA */
+  flex-direction: column;       /* FUE AGREGADA O MODIFICADA */
+  gap: 1rem;                    /* FUE AGREGADA O MODIFICADA */
+}
+
 /* Inputs, select y textarea con tamaño uniforme */
 input, select, textarea {
   width: 100%;
@@ -72,19 +79,27 @@ input, select, textarea {
   border: 1px solid rgba(0,0,0,0.2);
   border-radius: 14px;
   font-size: 1rem;
-  line-height: 1.2rem;           /* FUE AGREGADA O MODIFICADA */
+  line-height: normal;            /* FUE AGREGADA O MODIFICADA */
   outline: none;
   transition: all 0.25s ease;
   background: rgba(255,255,255,0.3);
   color: #000;
   resize: none;
-  box-sizing: border-box;        /* FUE AGREGADA O MODIFICADA */
-  height: 3.6rem;                /* FUE AGREGADA O MODIFICADA */
-  min-height: 3.6rem;            /* FUE AGREGADA O MODIFICADA */
+  box-sizing: border-box;         /* FUE AGREGADA O MODIFICADA */
+  height: 3.6rem;                 /* FUE AGREGADA O MODIFICADA */
+  min-height: 3.6rem;             /* FUE AGREGADA O MODIFICADA */
 }
 
+/* Textarea puede ser más grande */
 textarea {
-  height: 120px; /* diferente altura para textarea */
+  height: 120px;                  /* FUE AGREGADA O MODIFICADA */
+}
+
+/* Normalizar apariencia de select */
+select {
+  -webkit-appearance: none;       /* FUE AGREGADA O MODIFICADA */
+  -moz-appearance: none;          /* FUE AGREGADA O MODIFICADA */
+  appearance: none;               /* FUE AGREGADA O MODIFICADA */
 }
 
 input::placeholder, textarea::placeholder {
