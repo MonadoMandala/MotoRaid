@@ -150,6 +150,6 @@ form .banner {
   display: block;        /* necesaria para centrar con margin auto */
   max-width: 100%;       /* nunca se hará más grande que el contenedor */
   height: auto;          /* mantiene proporción */
-  margin: 0 auto 15px;   /* centrada horizontalmente + espacio abajo */
+  margin: 0 auto 30px;   /* centrada horizontalmente + espacio abajo */
   border-radius: 12px;
 }
