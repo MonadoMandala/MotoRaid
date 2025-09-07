@@ -1,155 +1,158 @@
 /* Efecto iOS Glassmorphism */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background: url("https://images.unsplash.com/photo-1505765050516-f72dcac9c60b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80") no-repeat center center fixed;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0;
-  padding: 1rem;
-  position: relative;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Define la fuente principal, usando fuentes del sistema */
+  background: url("https://images.unsplash.com/photo-1505765050516-f72dcac9c60b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80") no-repeat center center fixed; /* Imagen de fondo centrada y fija */
+  background-size: cover; /* La imagen cubre toda la pantalla */
+  display: flex; /* Convierte el body en contenedor flex */
+  justify-content: center; /* Centra contenido horizontalmente */
+  align-items: center; /* Centra contenido verticalmente */
+  min-height: 100vh; /* Alto mínimo igual a la pantalla */
+  margin: 0; /* Elimina márgenes del navegador */
+  padding: 1rem; /* Espaciado interno alrededor */
+  position: relative; /* Necesario para usar el ::before en posición absoluta */
 }
 
 body::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  z-index: 0;
+  content: ""; /* Crea un pseudo-elemento vacío */
+  position: absolute; /* Lo posiciona sobre todo el body */
+  top: 0; left: 0; /* Lo ubica en la esquina superior izquierda */
+  width: 100%; height: 100%; /* Cubre toda la pantalla */
+  background: rgba(255, 255, 255, 0.35); /* Capa blanca semitransparente */
+  backdrop-filter: blur(12px); /* Aplica desenfoque detrás (efecto glass) */
+  -webkit-backdrop-filter: blur(12px); /* Compatibilidad Safari */
+  z-index: 0; /* Se coloca debajo del contenido principal */
 }
 
 .app-container {
-  position: relative;
-  z-index: 1;
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  padding: 2rem;
-  border-radius: 24px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  width: 100%;
-  max-width: 510px;
-  color: #000;
-  animation: fadeIn 0.8s ease;
+  position: relative; /* Permite manejar su propio contexto */
+  z-index: 1; /* Se muestra encima del pseudo-elemento */
+  background: rgba(255, 255, 255, 0.25); /* Fondo blanco transparente */
+  backdrop-filter: blur(20px) saturate(180%); /* Más desenfoque y saturación */
+  -webkit-backdrop-filter: blur(20px) saturate(180%); /* Compatibilidad Safari */
+  padding: 2rem; /* Espaciado interno */
+  border-radius: 24px; /* Bordes redondeados */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* Sombra difusa */
+  width: 100%; /* Ocupará todo el ancho disponible */
+  max-width: 510px; /* Pero nunca más ancho que 510px */
+  color: #000; /* Texto en negro */
+  animation: fadeIn 0.8s ease; /* Animación al aparecer */
 }
 
 h1 {
-  text-align: center;
-  margin: 0 0 0.25rem 0;
-  font-size: 1.9rem;
+  text-align: center; /* Centra el texto */
+  margin: 0 0 0.25rem 0; /* Margen inferior pequeño */
+  font-size: 1.9rem; /* Tamaño del título */
 }
+
 .service-tag {
-  text-align: center;
-  color: #00c853;
-  font-size: 1.05rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
+  text-align: center; /* Centra el texto */
+  color: #00c853; /* Verde */
+  font-size: 1.05rem; /* Tamaño un poco mayor que normal */
+  font-weight: 600; /* Semi-negrita */
+  margin-bottom: 0.5rem; /* Separación abajo */
 }
+
 .subtitle {
-  text-align: center;
-  color: #333;
-  font-size: 0.95rem;
-  margin-bottom: 0.5rem;
+  text-align: center; /* Centrado */
+  color: #333; /* Gris oscuro */
+  font-size: 0.95rem; /* Un poco más pequeño */
+  margin-bottom: 0.5rem; /* Separación abajo */
 }
 
 label {
-  display: block;
-  margin-top: 1rem;
-  font-weight: 600;
-  font-size: 0.95rem;
+  display: block; /* Ocupa toda la línea */
+  margin-top: 1rem; /* Espacio arriba */
+  font-weight: 600; /* Semi-negrita */
+  font-size: 0.95rem; /* Tamaño de letra */
 }
 
 /* Contenedor form para alinear elementos */
 form {
-  display: flex;                /* FUE AGREGADA O MODIFICADA */
-  flex-direction: column;       /* FUE AGREGADA O MODIFICADA */
-  gap: 1rem;                    /* FUE AGREGADA O MODIFICADA */
+  display: flex; /* Flexbox */
+  flex-direction: column; /* Los hijos en columna */
+  gap: 1rem; /* Espaciado uniforme entre los elementos */
 }
 
 /* Inputs, select y textarea con tamaño uniforme */
 input, select, textarea {
-  width: 100%;
-  padding: 0.9rem;               /* FUE AGREGADA O MODIFICADA */
-  margin-top: 0.5rem;
-  border: 1px solid rgba(0,0,0,0.2);
-  border-radius: 14px;
-  font-size: 1rem;
-  line-height: normal;            /* FUE AGREGADA O MODIFICADA */
-  outline: none;
-  transition: all 0.25s ease;
-  background: rgba(255,255,255,0.3);
-  color: #000;
-  resize: none;
-  box-sizing: border-box;         /* FUE AGREGADA O MODIFICADA */
-  height: 3.6rem;                 /* FUE AGREGADA O MODIFICADA */
-  min-height: 3.6rem;             /* FUE AGREGADA O MODIFICADA */
+  width: 95%; /* Anchura casi completa */
+  padding: 0.9rem; /* Relleno interno */
+  margin-top: 0.5rem; /* Separación superior */
+  border: 1px solid rgba(0,0,0,0.2); /* Borde gris claro */
+  border-radius: 14px; /* Bordes redondeados */
+  font-size: 1rem; /* Texto estándar */
+  line-height: normal; /* Altura normal de línea */
+  outline: none; /* Quita borde azul al hacer focus */
+  transition: all 0.25s ease; /* Animación suave al interactuar */
+  background: rgba(255,255,255,0.3); /* Fondo blanco semitransparente */
+  color: #000; /* Texto negro */
+  resize: none; /* Evita redimensionar textarea */
+  box-sizing: border-box; /* Incluye borde y padding en el ancho total */
+  height: 3.6rem; /* Altura fija */
+  min-height: 3.6rem; /* Evita que sea más pequeño */
 }
 
 /* Textarea puede ser más grande */
 textarea {
-  height: 120px;                  /* FUE AGREGADA O MODIFICADA */
+  height: 120px; /* Altura mayor para escribir más texto */
 }
 
 input::placeholder, textarea::placeholder {
-  color: rgba(0,0,0,0.5);
+  color: rgba(0,0,0,0.5); /* Color gris para placeholders */
 }
-select option { color: #000; }
+
+select option { color: #000; } /* Opciones en negro */
 
 input:focus, select:focus, textarea:focus {
-  border-color: #00c853;
-  background: rgba(255,255,255,0.6);
-  box-shadow: 0 0 0 4px rgba(0,200,83,0.2);
+  border-color: #00c853; /* Verde al enfocarse */
+  background: rgba(255,255,255,0.6); /* Fondo más claro */
+  box-shadow: 0 0 0 4px rgba(0,200,83,0.2); /* Resplandor verde */
 }
 
 button {
-  margin-top: 2rem;
-  width: 100%;
-  padding: 1rem;
-  background: linear-gradient(135deg, #00c853, #00b24b);
-  color: white;
-  border: none;
-  border-radius: 16px;
-  font-size: 1.1rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.25s ease;
-  box-shadow: 0 4px 12px rgba(0,200,83,0.4);
+  margin-top: 2rem; /* Espacio superior */
+  width: 100%; /* Ancho completo */
+  padding: 1rem; /* Espaciado interno */
+  background: linear-gradient(135deg, #00c853, #00b24b); /* Degradado verde */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 16px; /* Bordes redondeados */
+  font-size: 1.1rem; /* Texto más grande */
+  font-weight: 700; /* Negrita */
+  cursor: pointer; /* Manito al pasar encima */
+  transition: transform 0.15s ease, box-shadow 0.25s ease; /* Animación suave */
+  box-shadow: 0 4px 12px rgba(0,200,83,0.4); /* Sombra verde */
 }
 
 button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0,200,83,0.5);
+  transform: translateY(-2px); /* Se levanta un poco */
+  box-shadow: 0 6px 16px rgba(0,200,83,0.5); /* Más sombra */
 }
 
 button:active {
-  transform: translateY(1px);
-  box-shadow: 0 3px 10px rgba(0,200,83,0.3);
+  transform: translateY(1px); /* Se hunde un poco */
+  box-shadow: 0 3px 10px rgba(0,200,83,0.3); /* Menos sombra */
 }
 
 .hint {
-  font-size: 0.85rem;
-  color: #555;
-  margin-top: 0.35rem;
+  font-size: 0.85rem; /* Texto pequeño */
+  color: #555; /* Gris */
+  margin-top: 0.35rem; /* Separación arriba */
 }
 
-.hidden { display: none; }
-.show { display: block; }
+.hidden { display: none; } /* Oculta elementos */
+.show { display: block; } /* Muestra elementos */
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(20px); } /* Empieza invisible y abajo */
+  to { opacity: 1; transform: translateY(0); } /* Termina visible y en su lugar */
 }
 
 /* Banner centrado dentro del form */
 form .banner {
-  display: block;        /* necesaria para centrar con margin auto */
-  max-width: 100%;       /* nunca se hará más grande que el contenedor */
-  height: auto;          /* mantiene proporción */
-  margin: 0 auto 30px;   /* centrada horizontalmente + espacio abajo */
-  border-radius: 12px;
+  display: block; /* Hace que la imagen sea un bloque */
+  max-width: 100%; /* No más grande que el contenedor */
+  height: auto; /* Mantiene proporción */
+  margin: 0 auto 15px; /* Centrado horizontal con espacio abajo */
+  border-radius: 12px; /* Bordes redondeados */
 }
