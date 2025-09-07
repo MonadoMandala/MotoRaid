@@ -73,7 +73,7 @@ form {
 
 /* Inputs, select y textarea con tamaño uniforme */
 input, select, textarea {
-  width: 100%;
+  width: 95%;
   padding: 0.9rem;               /* FUE AGREGADA O MODIFICADA */
   margin-top: 0.5rem;
   border: 1px solid rgba(0,0,0,0.2);
