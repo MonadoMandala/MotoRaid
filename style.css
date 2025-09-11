@@ -24,18 +24,18 @@ body::before {
 }
 
 .app-container {
-  position: relative; /* Permite manejar su propio contexto */
-  z-index: 1; /* Se muestra encima del pseudo-elemento */
-  background: rgba(255, 255, 255, 0.25); /* Fondo blanco transparente */
-  backdrop-filter: blur(20px) saturate(180%); /* Más desenfoque y saturación */
-  -webkit-backdrop-filter: blur(20px) saturate(180%); /* Compatibilidad Safari */
-  padding: 2rem; /* Espaciado interno */
-  border-radius: 24px; /* Bordes redondeados */
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* Sombra difusa */
-  width: 100%; /* Ocupará todo el ancho disponible */
-  max-width: 510px; /* Pero nunca más ancho que 510px */
-  color: #000; /* Texto en negro */
-  animation: fadeIn 0.8s ease; /* Animación al aparecer */
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  padding: 2rem;
+  border-radius: 24px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 460px;
+  color: #000;
+  animation: fadeIn 0.8s ease;
 }
 
 h1 {
