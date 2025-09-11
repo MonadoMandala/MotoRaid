@@ -79,7 +79,6 @@ input, select, textarea {
   max-width: 400px; /* Largo uniforme máximo */
   display: block; /* Para que respeten el centrado */
   margin: 0.5rem auto; /* Separación y centrado horizontal */
-  
   padding: 0.9rem; /* Relleno interno */
   border: 1px solid rgba(0,0,0,0.2); /* Borde gris claro */
   border-radius: 14px; /* Bordes redondeados */
