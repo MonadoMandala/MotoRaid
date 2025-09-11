@@ -75,9 +75,12 @@ form {
 
 /* Inputs, select y textarea con tamaño uniforme */
 input, select, textarea {
-  width: 100%; /* Anchura casi completa */
+  width: 100%; /* Este será el valor base */
+  max-width: 400px; /* Largo uniforme máximo */
+  display: block; /* Para que respeten el centrado */
+  margin: 0.5rem auto; /* Separación y centrado horizontal */
+  
   padding: 0.9rem; /* Relleno interno */
-  margin-top: 0.5rem; /* Separación superior */
   border: 1px solid rgba(0,0,0,0.2); /* Borde gris claro */
   border-radius: 14px; /* Bordes redondeados */
   font-size: 1rem; /* Texto estándar */
